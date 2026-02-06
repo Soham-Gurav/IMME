@@ -39,6 +39,73 @@ MMEE emphasizes **interpretability, alignment quality, anomaly detection, and ev
 
 ---
 
+## Architecture Overview
+mmee/
+│
+├── backend/
+│   ├── app.py                 # Flask entry point
+│   ├── requirements.txt
+│   │
+│   ├── config/
+│   │   └── settings.py        # model names, paths, constants
+│   │
+│   ├── data/
+│   │   ├── images/            # dataset images
+│   │   ├── captions.csv
+│   │   └── labels.csv
+│   │
+│   ├── models/
+│   │   ├── clip_encoder.py    # CLIP embeddings
+│   │   ├── vljepa_encoder.py  # VL-JEPA-inspired encoder
+│   │   └── __init__.py
+│   │
+│   ├── embeddings/
+│   │   ├── generate.py        # batch embedding generation
+│   │   └── cache/             # saved .npy embeddings
+│   │
+│   ├── analysis/
+│   │   ├── projection.py      # PCA / t-SNE / UMAP
+│   │   ├── alignment.py       # Procrustes + cosine
+│   │   ├── outliers.py        # IF, LOF, DBSCAN
+│   │   ├── fusion.py          # Logistic Regression
+│   │   └── evaluation.py      # ROC, PR, confusion matrix
+│   │
+│   ├── api/
+│   │   ├── embeddings.py      # /embeddings endpoint
+│   │   ├── analysis.py        # /project /align /outliers
+│   │   └── evaluation.py      # /evaluate
+│   │
+│   └── utils/
+│       ├── image_utils.py
+│       ├── metrics.py
+│       └── helpers.py
+│
+├── frontend/
+│   ├── app/                   # Next.js app router
+│   │   ├── page.tsx           # main dashboard
+│   │   ├── layout.tsx
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   │   ├── EmbeddingPlot.tsx
+│   │   ├── RocCurve.tsx
+│   │   ├── ConfusionMatrix.tsx
+│   │   └── Controls.tsx
+│   │
+│   ├── lib/
+│   │   └── api.ts             # Flask API calls
+│   │
+│   └── package.json
+│
+├── notebooks/
+│   ├── exploration.ipynb      # quick experiments
+│   └── sanity_checks.ipynb
+│
+├── README.md
+└── .gitignore
+
+---
+
 ## Conceptual Pipeline (Animated Flow)
 
 Image + Text Dataset
