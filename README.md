@@ -40,7 +40,13 @@ MMEE emphasizes **interpretability, alignment quality, anomaly detection, and ev
 ---
 
 ## Architecture Overview
-mmee/
+<img width="671" height="673" alt="image" src="https://github.com/user-attachments/assets/583dccfa-c874-43a9-ad7d-10380acbebdd" />
+<img width="861" height="724" alt="image" src="https://github.com/user-attachments/assets/aa1ea048-9057-4024-8504-c1eb6609bf68" />
+<img width="693" height="111" alt="image" src="https://github.com/user-attachments/assets/18a284a1-1499-4514-8e93-abeef09f7797" />
+
+---
+
+immee/
 │
 ├── backend/
 │   ├── app.py                 # Flask entry point
