@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     # Example test
     image_path = "backend/data/images/submarine.jpg"
-    caption = "A modern animated submarine floating underwater with yellow light on inside and has bubble stream coming out of it"
+    caption = "A modern animated submarine floating underwater with on inside and has bubble stream coming out of it"
 
     img_emb = encoder.encode_image(image_path)
     txt_emb = encoder.encode_text(caption)
