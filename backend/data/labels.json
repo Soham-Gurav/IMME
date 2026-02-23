@@ -1,0 +1,12 @@
+{
+  "dog.jpg": "animal",
+  "cat.jpg": "animal",
+  "car.jpg": "vehicle",
+  "submarine.jpg": "vehicle",
+  "airplane.jpg": "vehicle",
+  "mountain.jpg": "nature",
+  "beach.jpg": "nature",
+  "city.jpg": "urban",
+  "forest.jpg": "nature",
+  "ship.jpg": "vehicle"
+}
